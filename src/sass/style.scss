@@ -1,0 +1,140 @@
+//Reset file
+@import './reset';
+
+//Utilities
+@import './breakpoints';
+@import './mixins';
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Pacifico&display=swap');
+
+.main-part {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 168, 45) 0%,
+    rgba(32, 40, 189, 1) 51%,
+    rgba(241, 111, 92, 1) 51%,
+    rgba(240, 47, 23, 1) 51%,
+    rgba(252, 204, 60, 1) 100%
+  );
+}
+
+.td-panel {
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 85%;
+  width: 500px;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  min-height: 180px;
+  padding: 15px;
+  position: absolute;
+  box-shadow: 5px -5px 15px rgba(0, 0, 0, 0.3);
+
+  &__title {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+    color: #fccc3c;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  &__counter {
+    font-weight: 900;
+  }
+
+  &__list-item {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid rgba(32, 40, 189, 0.5);
+    background-color: #fff;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '✔';
+      transform: translateY(-50%) rotate(8deg);
+      font-weight: 900;
+      color: rgba(32, 40, 189, 0.5);
+    }
+  }
+
+  &__list-complete-title {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  &__list-complete-item {
+    text-decoration: line-through;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__list-complete-item-tick {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 168, 45);
+    background-color: #fff;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '✔';
+      transform: translateY(-50%) rotate(8deg);
+      font-weight: 900;
+      color: rgb(0, 168, 45);
+    }
+  }
+}
+
+.td-form {
+  display: flex;
+  margin-bottom: 15px;
+
+  &__input {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    background-color: rgba(252, 204, 60, 0.3);
+  }
+
+  &__button {
+    width: 50px;
+    border: none;
+    background-color: #fccc3c;
+    color: rgba(241, 111, 92, 0.8);
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
