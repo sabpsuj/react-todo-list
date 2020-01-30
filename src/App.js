@@ -30,7 +30,7 @@ export default () => {
        }
      </ul>
       {
-      todos.filter(td => td.complete).length > 0 ? <h3 className="td-panel__list-complete-title">Completed tasks</h3> : ""
+      todos.filter(td => td.complete).length > 0 ? <h3 className="td-panel__list-complete-title">Completed tasks: (<span className="td-panel__counter">{todos.filter(todo => todo.complete).length}</span>)</h3> : ""
       }
      <ul className="td-panel__list-complete">
       {
